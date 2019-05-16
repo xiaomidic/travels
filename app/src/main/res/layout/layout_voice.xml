@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll">
+
+        <View
+            android:id="@+id/dian2"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@color/c_fa6a13"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            />
+
+        <View
+            android:id="@+id/xian2"
+            android:layout_width="2dp"
+            android:layout_height="120dp"
+            android:background="@color/c_fa6a13"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:layout_below="@id/dian2"
+            />
+
+        <TextView
+            android:id="@+id/neww"
+            android:layout_width="98dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_alignTop="@+id/dian2"
+            android:layout_toRightOf="@id/dian2"
+            android:text="更新了一条语音"
+            android:textColor="@color/c_333333"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/neww"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@id/dian2">
+
+            <View
+                android:layout_width="@dimen/dp_320"
+                android:layout_height="@dimen/dp_102"
+                android:background="@color/c_fefefe" />
+
+            <ImageView
+                android:id="@+id/qq"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:src="@drawable/line_button_paly_highlight" />
+
+            <TextView
+                android:id="@+id/six3"
+                android:layout_width="@dimen/dp_17"
+                android:layout_height="@dimen/dp_20"
+                android:layout_below="@id/qq"
+                android:layout_marginLeft="@dimen/dp_200"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="66" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_13"
+                android:layout_below="@id/qq"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_14"
+                android:layout_toRightOf="@id/six3"
+                android:background="@mipmap/comment" />
+
+            <TextView
+                android:id="@+id/seven"
+                android:layout_width="@dimen/dp_17"
+                android:layout_height="@dimen/dp_20"
+                android:layout_below="@id/qq"
+                android:layout_marginLeft="@dimen/dp_270"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="137" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_13"
+                android:layout_below="@id/qq"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_14"
+                android:layout_toRightOf="@id/seven"
+                android:background="@mipmap/praise" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

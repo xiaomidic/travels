@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".trip.ui.main.activity.GuidePageActivity">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <day02.l.example.com.everywheretrip.trip.widget.PreviewIndicator
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_43"
+        android:id="@+id/indicator"
+        android:visibility="visible"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_8"/>
+    <Button
+        android:textColor="@color/c_ffffff"
+        android:textSize="@dimen/sp_16"
+        android:id="@+id/btn_tiao"
+        android:text="立即体验"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_46"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_me"
+        android:layout_width="@dimen/dp_127"
+        android:layout_height="@dimen/dp_40" />
+
+
+</RelativeLayout>

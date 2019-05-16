@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "day02.l.example.com.everywheretrip"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    greendao {
+        schemaVersion 1  // 数据库的版本号
+        daoPackage 'day02.l.example.com.everywheretrip.dao'  // 包名
+        targetGenDir 'src/main/java' // 存放的目录地址
+    }
+    //需要加这行代码,否则资产目录下面的资源找不到
+    sourceSets { main { assets.srcDirs = ['src/assets', 'src/assets/'] } }
+
+    //关闭AS校验我们的资源文件，或者说是PNG等图片
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //1.1.0 （1.0.5及以前版本的老用户升级需谨慎，API改动过大）
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-21'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-21'
+    //没有使用特殊Header，可以不加这行
+    //卡片布局
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    //Glide 4.x
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //google material design 几乎是所有这种风格的控件的依赖
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    implementation 'de.hdodenhof:circleimageview:2.1.0'                   //把图片设置圆形
+    //图片变换的依赖
+    implementation 'jp.wasabeef:glide-transformations:3.3.0'
+    //butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.android.support:design:27.1.1'
+    //RxJava+Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    // 必要依赖，解析json字符所用
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    // 必要依赖，和Rxjava结合必须用到，下面会提到
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.3'
+    // 必要rxjava2依赖
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    implementation 'org.greenrobot:greendao:3.2.0'
+    implementation 'org.greenrobot:greendao-generator:3.2.0'
+    // 必要rxandrroid依赖，切线程时需要用到
+    api 'com.just.agentweb:agentweb:4.0.3-alpha@aar'
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    // (必选)
+    implementation files('libs/umeng-analytics-8.0.2.jar')
+    implementation 'com.bm.photoview:library:1.4.1'
+
+
+}

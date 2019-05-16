@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">EveryWhereTrip</string>
+    <string name="unknow_error">未知错误</string>
+
+    <string name="conn_error">连接失败</string>
+
+    <string name="conn_timeout">连接超时</string>
+
+    <string name="net_error">网络错误</string>
+
+    <string name="parse_error">解析异常</string>
+
+    <string name="net_unused">当前网络不可用</string>
+
+    <string name="agree_protocol">登录或者注册即同一到处旅行用户协议</string>
+
+    <string name="for_more_service">您好,为了获取更好的服务</string>
+
+    <string name="login_app">请登录到处旅行</string>
+
+    <string name="contry_code">+86</string>
+
+    <string name="input_phone">请输入手机号码</string>
+
+    <string name="send_verify">发送验证码</string>
+
+    <string name="or">or</string>
+
+    <string name="send_again">重新发送</string>
+
+    <string name="input_verify">请输入验证码</string>
+
+    <string name="wait_please">请稍后...</string>
+
+    <string name="oauth_cancel">授权取消了</string>
+
+    <string name="oauth_error">授权失败</string>
+
+    <string name="login_fail">登录失败</string>
+
+    <string name="login_success">登录成功</string>
+    <string name="get_verify_fail">获取验证码失败</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="card_volume">我的卡卷</string>
+    <string name="yigou">已购行程</string>
+    <string name="shoucang">我的收藏</string>
+    <string name="guanzhu">我的关注</string>
+    <string name="kefu">联系客服</string>
+    <string name="fankui">意见反馈</string>
+    <string name="banben">版本测试</string>
+    <string name="xinxi">个人信息</string>
+    <string name="verify_code">验证码：</string>
+    <string name="personal">个人信息</string>
+    <string name="head_portrait">头像</string>
+    <string name="user_nickname">用户昵称</string>
+    <string name="gender">性别</string>
+    <string name="personalized_signature">个性签名</string>
+    <string name="change_password">修改密码</string>
+    <string name="bind_phone">绑定手机</string>
+    <string name="log_out">退出登录</string>
+    <string name="pinglun">查看全部评论</string>
+</resources>

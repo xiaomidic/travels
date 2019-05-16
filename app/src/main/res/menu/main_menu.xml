@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/me_kaquan"
+        android:title="@string/card_volume"
+        android:icon="@drawable/icon_me_kaquan"
+        app:showAsAction="always"
+        >
+    </item>
+    <item android:id="@+id/me_yigou"
+        android:title="@string/yigou"
+        android:icon="@drawable/icon_me_yigou"
+        app:showAsAction="always"
+        >
+    </item>
+    <item android:id="@+id/me_shoucang"
+        android:title="@string/shoucang"
+        android:icon="@drawable/icon_me_shoucang"
+        app:showAsAction="always"
+        >
+    </item>
+    <item android:id="@+id/me_guanzhu"
+        android:title="@string/guanzhu"
+        android:icon="@drawable/icon_me_guanzhu"
+        app:showAsAction="always"
+        >
+    </item>
+    <group>
+
+    </group>
+</menu>

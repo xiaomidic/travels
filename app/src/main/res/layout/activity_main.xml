@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    tools:context=".trip.ui.main.activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/c_fefefe">
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_marginBottom="@dimen/dp_18"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:src="@mipmap/zhanweitu_xianlu_qipao_small" />
+            </android.support.v7.widget.Toolbar>
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab"
+            app:tabIndicatorHeight="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_alignParentBottom="true"
+            app:tabMode="fixed" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/tab"
+            android:layout_below="@id/layu" />
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/na"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left">
+
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_70"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_37"
+                android:src="@mipmap/abc" />
+
+            <TextView
+                android:id="@+id/miss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginTop="@dimen/dp_42"
+                android:layout_toRightOf="@+id/img"
+                android:text="林小姐"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/sp_22" />
+
+            <TextView
+                android:id="@+id/gexing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/miss"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_toRightOf="@id/img"
+                android:text="四体不勤五谷不分人懒嘴花痴健忘"
+                android:textSize="@dimen/sp_13" />
+
+            <TextView
+                android:id="@+id/tv_bianji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/gexing"
+                android:layout_below="@id/gexing"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="编辑"
+                android:textColor="@color/c_fa6a13"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_bianji"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_toLeftOf="@id/tv_bianji"
+                android:src="@drawable/icon_me_bianji" />
+
+            <RelativeLayout
+                android:id="@+id/rel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_122"
+                android:layout_below="@id/img"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_38">
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/bg_number_default" />
+
+                <TextView
+                    android:id="@+id/tv_wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="我的钱包"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_99"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="99"
+                    android:textColor="@color/c_ffffff"
+                    android:textSize="@dimen/sp_58" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_60"
+                    android:layout_toRightOf="@id/tv_99"
+                    android:text="元"
+                    android:textColor="@color/c_ffffff" />
+
+                <TextView
+                    android:id="@+id/tv_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_12"
+                    android:text="》" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_text"
+                    android:layout_marginRight="@dimen/dp_6"
+                    android:layout_toLeftOf="@id/tv_text"
+                    android:text="赢取奖金" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_19"
+                app:cardBackgroundColor="@color/c_ffffff"
+                app:cardCornerRadius="@dimen/dp_8"
+                app:cardElevation="@dimen/dp_1"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_kajuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_11"
+                        android:layout_marginTop="@dimen/dp_21"
+                        android:src="@drawable/icon_me_kaquan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_kajuan"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@id/img_kajuan"
+                        android:text="@string/card_volume" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:layout_marginTop="@dimen/dp_22"
+                        android:src="@mipmap/right_jian_tou" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_below="@id/img_kajuan"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:background="@color/c_f0f0f0" />
+
+                    <ImageView
+                        android:id="@+id/img_yigou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_19"
+                        android:src="@drawable/icon_me_yigou" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_yigou"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@+id/img_yigou"
+                        android:text="@string/yigou" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/img_yigou"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:src="@mipmap/right_jian_tou" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_below="@id/img_yigou"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:background="@color/c_f0f0f0" />
+
+                    <ImageView
+                        android:id="@+id/img_shoucang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view2"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_19"
+                        android:src="@drawable/icon_me_shoucang" />
+
+                    <TextView
+                        android:id="@+id/tv_colltion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_shoucang"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@+id/img_shoucang"
+                        android:text="@string/guanzhu" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/img_shoucang"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:src="@mipmap/right_jian_tou" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_below="@id/img_shoucang"
+                        android:layout_marginTop="@dimen/dp_18"
+                        android:background="@color/c_f0f0f0" />
+
+                    <ImageView
+                        android:id="@+id/img_guanzhu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view3"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_19"
+                        android:src="@drawable/icon_me_guanzhu" />
+
+                    <TextView
+                        android:id="@+id/tv_shou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_guanzhu"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@+id/img_guanzhu"
+                        android:text="@string/shoucang" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@id/img_guanzhu"
+                        android:layout_marginBottom="@dimen/dp_20"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:src="@mipmap/right_jian_tou" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/card"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_180">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_kefu"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_me_kefu" />
+
+                    <TextView
+                        android:id="@+id/tv_kefu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/img_kefu"
+                        android:layout_marginLeft="@dimen/dp_7"
+                        android:layout_toRightOf="@+id/img_kefu"
+                        android:text="@string/kefu" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_fankui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@+id/tv_kefu"
+                        android:src="@drawable/icon_me_fankui" />
+
+                    <TextView
+                        android:id="@+id/tv_fankui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/img_fankui"
+                        android:layout_marginLeft="@dimen/dp_9"
+                        android:layout_toRightOf="@+id/img_fankui"
+                        android:text="@string/fankui" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/banben"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_banben"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_fankui"
+                        android:src="@drawable/icon_me_banben" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/img_banben"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:layout_toRightOf="@+id/img_banben"
+                        android:text="@string/banben" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>
